@@ -1,0 +1,17 @@
+fr:
+  activerecord:
+    models:
+      book: Livre
+    attributes:
+      book:
+        name: nom
+        author: auteur
+        description: description
+    errors:
+      models:
+        book:
+          attributes:
+            name:
+              blank: "Le nom du livre est obligatoire."
+            author:
+              blank: "Le nom de l'auteur est obligatoire."

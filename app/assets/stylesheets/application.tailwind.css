@@ -26,4 +26,12 @@
   .form-label {
     @apply font-bold;
   }
+
+  .form-input.is-invalid {
+    @apply border-red-500 mb-1;
+  }
+
+  .error {
+    @apply text-xs font-medium text-red-500 mt-1 max-w-fit;
+  }
 }

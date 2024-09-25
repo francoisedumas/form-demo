@@ -10,8 +10,8 @@ SimpleForm.setup do |config|
     b.optional :pattern
     b.optional :min_max
     b.optional :readonly
-    b.use :label, class: "form-label"
-    b.use :input, class: "form-input"
+    b.use :label, class: "form-label", error_class: "text-red-500"
+    b.use :input, class: "form-input", error_class: "is-invalid"
     b.use :hint,  wrap_with: { tag: :span, class: :hint }
     b.use :error, wrap_with: { tag: :span, class: :error }
   end
@@ -23,4 +23,6 @@ SimpleForm.setup do |config|
   config.error_notification_class = 'error_notification'
   config.browser_validations = false
   config.boolean_label_class = 'checkbox'
+  # How the label text should be generated altogether with the required text.
+  config.label_text = lambda { |label, required, explicit_label| "#{label} #{required}" }
 end
