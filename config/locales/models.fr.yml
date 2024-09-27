@@ -2,11 +2,17 @@ fr:
   activerecord:
     models:
       book: Livre
+      user: Utilisateur
     attributes:
       book:
         name: nom
         author: auteur
         description: description
+      user:
+        password: Mot de passe
+        email: Email
+        remember_me: Se souvenir de moi ?
+
     errors:
       models:
         book:
