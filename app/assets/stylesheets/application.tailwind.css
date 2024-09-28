@@ -34,4 +34,24 @@
   .error {
     @apply text-xs font-medium text-red-500 mt-1 max-w-fit;
   }
+
+  .hint {
+    @apply text-xs text-gray-500 mt-1;
+  }
+
+  .form-boolean {
+    @apply relative flex items-start my-2;
+  }
+
+  .boolean-wrapper-checkbox {
+    @apply flex h-6 items-center;
+  }
+
+  .boolean-wrapper-label {
+    @apply flex flex-col ml-3 text-sm leading-6;
+  }
+
+  .boolean-input {
+    @apply h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-600;
+  }
 }

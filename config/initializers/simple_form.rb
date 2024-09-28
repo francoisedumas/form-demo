@@ -16,6 +16,26 @@ SimpleForm.setup do |config|
     b.use :error, wrap_with: { tag: :span, class: :error }
   end
 
+  # vertical input for boolean
+  config.wrappers :vertical_boolean, class: 'form-boolean' do |b|
+    b.use :html5
+    b.optional :readonly
+    b.wrapper tag: 'div', class: 'boolean-wrapper-checkbox' do |bb|
+      bb.use :input, class: 'boolean-input'
+    end
+    b.wrapper tag: 'div', class: 'boolean-wrapper-label' do |bb|
+      bb.use :label, class: "form-label", error_class: "text-red-500"
+      bb.use :hint,  wrap_with: { tag: :span, class: :hint }
+      bb.use :error, wrap_with: { tag: :span, class: :error }
+    end
+  end
+
+  # Custom wrappers for input types. This should be a hash containing an input
+  # type as key and the wrapper that will be used for all inputs with specified type.
+  config.wrapper_mappings = {
+    boolean: :vertical_boolean
+  }
+
   config.default_wrapper = :default
   config.boolean_style = :nested
   config.button_class = 'btn btn-primary'
