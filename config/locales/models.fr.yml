@@ -7,6 +7,8 @@ fr:
       book:
         name: nom
         author: auteur
+        user: membre
+        category: genre
         description: description
       user:
         password: Mot de passe
@@ -21,3 +23,11 @@ fr:
               blank: "Le nom du livre est obligatoire."
             author:
               blank: "Le nom de l'auteur est obligatoire."
+
+  enums:
+    books:
+      categories:
+        fiction: Fiction
+        fantaisy: Fantastique
+        science: Science
+        police: Policier

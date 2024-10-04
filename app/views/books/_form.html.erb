@@ -2,6 +2,8 @@
 <%= simple_form_for(book) do |form| %>
   <%= form.input :name %>
   <%= form.input :author %>
+  <%= form.input :category, collection: Book.categories.map { |key, _value| [I18n.t("enums.books.categories.#{key}"), key]}.to_h, include_blank: false %>
+  <%= form.association :user, label_method: :email, include_blank: false %>
   <%= form.input :description, as: :text %>
   <%= form.button :submit %>
 <% end %>
