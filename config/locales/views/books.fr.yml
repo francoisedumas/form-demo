@@ -1,0 +1,6 @@
+fr:
+  books:
+    create:
+      success: "Book was successfully created."
+    update:
+      success: "Book was successfully created."

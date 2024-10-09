@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class QrCodeController < ApplicationController
   def show
     qrcode = RQRCode::QRCode.new("https://www.youtube.com/@KokoriKodo")
